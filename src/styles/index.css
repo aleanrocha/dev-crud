@@ -1,0 +1,42 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-osw: 'Oswald', serif;
+  --font-global: 'Roboto', serif;
+}
+
+@layer components {
+  .form-container {
+    @apply flex flex-col gap-3;
+    @apply rounded-lg;
+  }
+  .input {
+    @apply flex p-2 rounded-lg border outline-0 h-12;
+  }
+  .form-control {
+    @apply flex flex-col gap-2;
+  }
+  .btn {
+    @apply p-2 bg-gray-600 text-white min-w-32;
+    @apply font-bold rounded-lg outline-0 cursor-pointer;
+    @apply hover:bg-gray-700 transition-all;
+  }
+  .error-message {
+    @apply text-red-500 text-sm font-bold;
+  }
+  .span-id {
+    @apply h-8 w-8 bg-blue-600 text-white font-bold rounded-full;
+    @apply flex justify-center items-center p-2;
+    @apply absolute transform -top-4 -left-4;
+  }
+  .modal-container {
+    @apply w-screen min-h-screen  bg-gray-900/70 p-8;
+    @apply fixed top-0 left-0 z-10;
+    @apply flex flex-col justify-center items-center;
+  }
+  .modal-child {
+    @apply w-full max-w-96 bg-gray-50 text-center font-bold;
+    @apply flex flex-wrap justify-center gap-4;
+    @apply py-8 px-4 z-10 relative m-4 rounded-md;
+  }
+}
